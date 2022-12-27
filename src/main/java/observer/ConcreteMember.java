@@ -3,6 +3,11 @@ package observer;
 public class ConcreteMember implements  Member{
 
     private UndoableStringBuilder Usb;
+
+    public ConcreteMember(String str) {
+        this.Usb = new UndoableStringBuilder(str);
+    }
+
     @Override
     public void update(UndoableStringBuilder usb) {
         this.setUsb(usb);
@@ -13,7 +18,7 @@ public class ConcreteMember implements  Member{
     }
 
     public void setUsb(UndoableStringBuilder usb) {
-        Usb = usb;
+        this.Usb = usb;
     }
 
 }

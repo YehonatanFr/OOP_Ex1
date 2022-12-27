@@ -12,8 +12,9 @@ public class UndoableStringBuilder {
 
     /**
      Empty constructor for String Builder
-     * */
-    public UndoableStringBuilder()
+     *
+     * @param str*/
+    public UndoableStringBuilder(String str)
     {
         mystring = new StringBuilder();
         stUndo = new Stack<>();
