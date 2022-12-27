@@ -3,7 +3,9 @@ package observer;
 import java.util.ArrayList;
 
 public class GroupAdmin implements Sender {
+    //The variable usb is the status describer of the Changes.
     private UndoableStringBuilder usb;
+    //The ArrayList MemberList is for keeping all the members in the group.
     private ArrayList<Member> MemberList;
 
     public GroupAdmin() {
