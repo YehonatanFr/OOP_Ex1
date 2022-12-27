@@ -21,7 +21,7 @@ public class Tests {
 
         groupAdmin.register(member1);
         groupAdmin.register(member2);
-        
+
         member1.toString();
 
         logger.info(()->JvmUtilities.objectFootprint(s1));
