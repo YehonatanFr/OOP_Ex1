@@ -27,7 +27,7 @@ public class Tests {
 
     //Creates for members
     String s1 = "Yossi";
-    String s2 = "Yaacov";
+    String s2 = "Yaakov";
     String s3 = "Alice";
     String s4 = "Bob";
 
@@ -45,17 +45,13 @@ public class Tests {
         //Print the members(names) for self-checked if members are exist
         System.out.println(m1);
         System.out.println(m2);
-
-        //Regiater new members
+        //Register new members
         groupAdmin.register(m1);
         groupAdmin.register(m2);
-
         //Checks that the members has register currently
         assertEquals(groupAdmin.MembersCurrently(),2);
-
         groupAdmin.register(m3);
         groupAdmin.register(m4);
-
         assertEquals(groupAdmin.MembersCurrently(),4);
     }
 
@@ -68,11 +64,9 @@ public class Tests {
         groupAdmin.register(m2);
         //Print the cuurent size of the group
         System.out.println(groupAdmin.MembersCurrently());
-
         //Unregister the members, the size should be 0
         groupAdmin.unregister(m1);
         groupAdmin.unregister(m2);
-
         assertEquals(groupAdmin.MembersCurrently(), 0);
 
     }
@@ -152,5 +146,6 @@ public class Tests {
         groupAdmin.notifyMembers(usb);
         assertEquals(m1.getUsb().toString(), s4);
     }
+
 
 }
