@@ -70,14 +70,16 @@ class GroupAdminTest {
 
     @Test
     void insert() {
-        UndoableStringBuilder str = new UndoableStringBuilder();
-
+        //Register new members
         groupAdmin.register(m1);
         groupAdmin.register(m2);
 
-        groupAdmin.insert(1, s3);
-
-        System.out.println(groupAdmin.toString());
+        //Make some changes on usb-in groupadmin
+        groupAdmin.append(s3);
+        groupAdmin.insert(1, s4);
+        //Check some test
+        assertEquals(groupAdmin.getUsb(),m1.getUsb());
+        assertEquals(groupAdmin.toString(), groupAdmin.getMemberList().toString());
     }
 
     @Test

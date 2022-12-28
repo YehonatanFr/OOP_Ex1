@@ -11,6 +11,7 @@ public class GroupAdmin implements Sender {
 
     public GroupAdmin() {
         this.MemberList = new ArrayList<>();
+        this.usb = new UndoableStringBuilder();
     }
 
     public int MembersCurrently()
@@ -60,10 +61,25 @@ public class GroupAdmin implements Sender {
         }
     }
 
+    public UndoableStringBuilder getUsb() {
+        return usb;
+    }
+
+    public void setUsb(UndoableStringBuilder usb) {
+        this.usb = usb;
+    }
+
+    public ArrayList<Member> getMemberList() {
+        return MemberList;
+    }
+
+    public void setMemberList(ArrayList<Member> memberList) {
+        MemberList = memberList;
+    }
+
     public String toString()
     {
         return MemberList.toString();
     }
-
 
 }
