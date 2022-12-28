@@ -43,7 +43,7 @@ public class Tests {
     @Test
     void register() {
         //printing the memoryStats of groupAdmin before adding members.
-        System.out.println("The groupAdmin memory use before adding members");
+        System.out.println("The groupAdmin memory 'use' before adding members");
         logger.info(() -> JvmUtilities.memoryStats(groupAdmin));
 
         //Print the members(names) for self-checked if members are exist
@@ -55,7 +55,7 @@ public class Tests {
         groupAdmin.register(m2);
 
         //printing the memoryStats of groupAdmin after adding two members.
-        System.out.println("The groupAdmin memory use  after adding two members.");
+        System.out.println("The groupAdmin memory 'use'  after adding two members.");
         logger.info(() -> JvmUtilities.memoryStats(groupAdmin));
 
         //Checks if the members has register currently
@@ -69,7 +69,7 @@ public class Tests {
     @Test
     void unregister() {
         //printing the memoryStats of groupAdmin before adding members.
-        System.out.println("The groupAdmin memory use before adding members");
+        System.out.println("The groupAdmin memory 'use' before adding members");
         logger.info(() -> JvmUtilities.memoryStats(groupAdmin));
         //The current size is 0
         System.out.println(groupAdmin.MembersCurrently());
@@ -79,7 +79,7 @@ public class Tests {
         groupAdmin.register(m2);
 
         //printing the memoryStats of groupAdmin after adding two members.
-        System.out.println("The groupAdmin memory use  after adding two members.");
+        System.out.println("The groupAdmin memory 'use' after adding two members.");
         logger.info(() -> JvmUtilities.memoryStats(groupAdmin));
 
         //Print the cuurent size of the group
@@ -90,7 +90,7 @@ public class Tests {
         groupAdmin.unregister(m2);
 
         //printing the memoryStats of groupAdmin after unregister the two members we added before.
-        System.out.println("The groupAdmin memory use after unregister the two members we added before.");
+        System.out.println("The groupAdmin memory 'use' after unregister the two members we added before.");
         logger.info(() -> JvmUtilities.memoryStats(groupAdmin));
 
         assertEquals(groupAdmin.MembersCurrently(), 0);
@@ -100,14 +100,14 @@ public class Tests {
     @Test
     void insert() {
         //printing the memoryStats of groupAdmin before adding members.
-        System.out.println("The groupAdmin memory use before adding members");
+        System.out.println("The groupAdmin memory 'use' before adding members");
         logger.info(() -> JvmUtilities.memoryStats(groupAdmin));
         //Register new members
         groupAdmin.register(m1);
         groupAdmin.register(m2);
 
         //printing the memoryStats of groupAdmin after adding two members.
-        System.out.println("The groupAdmin memory use  after adding two members.");
+        System.out.println("The groupAdmin memory 'use' after adding two members.");
         logger.info(() -> JvmUtilities.memoryStats(groupAdmin));
 
         //Make some changes on usb-in GroupAdmin
@@ -115,7 +115,7 @@ public class Tests {
         groupAdmin.insert(1, s4);
 
         //printing the memoryStats of groupAdmin after the usb has changed for all the members.
-        System.out.println("The groupAdmin memory use after the usb has changed for all the members");
+        System.out.println("The groupAdmin memory 'use' after the 'usb' has changed for all the members");
         logger.info(() -> JvmUtilities.memoryStats(groupAdmin));
 
         //Check some test
@@ -126,7 +126,7 @@ public class Tests {
     @Test
     void append() {
         //printing the memoryStats of groupAdmin before adding members.
-        System.out.println("The groupAdmin memory use before adding members");
+        System.out.println("The groupAdmin memory 'use' before adding members");
         logger.info(() -> JvmUtilities.memoryStats(groupAdmin));
 
         //Register new members
@@ -134,14 +134,14 @@ public class Tests {
         groupAdmin.register(m2);
 
         //printing the memoryStats of groupAdmin after adding two members.
-        System.out.println("The groupAdmin memory use  after adding two members.");
+        System.out.println("The groupAdmin memory 'use' after adding two members.");
         logger.info(() -> JvmUtilities.memoryStats(groupAdmin));
 
         //Make some changes on usb-in GroupAdmin
         groupAdmin.append(s3);
 
         //printing the memoryStats of groupAdmin after append new 'usb' to the members.
-        System.out.println("The groupAdmin memory use after append new 'usb' to the members.");
+        System.out.println("The groupAdmin memory 'use' after append new 'usb' to the members.");
         logger.info(() -> JvmUtilities.memoryStats(groupAdmin));
 
         //Check some test
@@ -152,14 +152,14 @@ public class Tests {
     @Test
     void delete() {
         //printing the memoryStats of groupAdmin before adding members.
-        System.out.println("The groupAdmin memory use before adding members");
+        System.out.println("The groupAdmin memory 'use' before adding members");
         logger.info(() -> JvmUtilities.memoryStats(groupAdmin));
         //Register new members
         groupAdmin.register(m1);
         groupAdmin.register(m2);
 
         //printing the memoryStats of groupAdmin after adding two members.
-        System.out.println("The groupAdmin memory use  after adding two members.");
+        System.out.println("The groupAdmin memory 'use' after adding two members.");
         logger.info(() -> JvmUtilities.memoryStats(groupAdmin));
 
         //Make some changes on usb-in GroupAdmin
@@ -167,7 +167,7 @@ public class Tests {
         groupAdmin.delete(0,4);
 
         //printing the memoryStats of groupAdmin after the usb has changed be 'delete' function for all the members.
-        System.out.println("The groupAdmin memory use after the usb has changed be 'delete' function for all the members.");
+        System.out.println("The groupAdmin memory 'use' after the 'usb' has changed be 'delete' function for all the members.");
         logger.info(() -> JvmUtilities.memoryStats(groupAdmin));
 
         //Test chalking
@@ -178,7 +178,7 @@ public class Tests {
     @Test
     void undo() {
         //printing the memoryStats of groupAdmin before adding members.
-        System.out.println("The groupAdmin memory use before adding members");
+        System.out.println("The groupAdmin memory 'use' before adding members");
         logger.info(() -> JvmUtilities.memoryStats(groupAdmin));
 
         //Register new members
@@ -187,7 +187,7 @@ public class Tests {
         groupAdmin.register(m3);
 
         //printing the memoryStats of groupAdmin after adding three members.
-        System.out.println("The groupAdmin memory use  after adding three members.");
+        System.out.println("The groupAdmin memory 'use' after adding three members.");
         logger.info(() -> JvmUtilities.memoryStats(groupAdmin));
 
         //Make some changes on usb-in GroupAdmin
@@ -195,7 +195,7 @@ public class Tests {
         groupAdmin.undo();
 
         //printing the memoryStats of groupAdmin after the usb has changed be 'undo' function for all the members.
-        System.out.println("The groupAdmin memory use after the usb has changed be 'undo' function for all the members.");
+        System.out.println("The groupAdmin memory 'use' after the 'usb' has changed be 'undo' function for all the members.");
         logger.info(() -> JvmUtilities.memoryStats(groupAdmin));
 
         assertEquals(groupAdmin.getUsb(),m1.getUsb());
@@ -205,7 +205,7 @@ public class Tests {
     void notifyMembers() {
         UndoableStringBuilder usb = new UndoableStringBuilder(s4);
         //printing the memoryStats of groupAdmin before adding members.
-        System.out.println("The groupAdmin memory use before adding members");
+        System.out.println("The groupAdmin memory 'use' before adding members");
         logger.info(() -> JvmUtilities.memoryStats(groupAdmin));
 
         //Register new members
@@ -214,14 +214,14 @@ public class Tests {
         groupAdmin.register(m3);
 
         //printing the memoryStats of groupAdmin after adding three members.
-        System.out.println("The groupAdmin memory use  after adding three members.");
+        System.out.println("The groupAdmin memory 'use' after adding three members.");
         logger.info(() -> JvmUtilities.memoryStats(groupAdmin));
 
         //Make actions and tests
         groupAdmin.notifyMembers(usb);
 
         //printing the memoryStats of groupAdmin after the usb has changed be 'notifyMembers' function for all the members.
-        System.out.println("The groupAdmin memory use after the usb has changed be 'notifyMembers' function for all the members.");
+        System.out.println("The groupAdmin memory 'use' after the 'usb' has changed be 'notifyMembers' function for all the members.");
         logger.info(() -> JvmUtilities.memoryStats(groupAdmin));
 
         assertEquals(m1.getUsb().toString(), s4);
@@ -231,7 +231,7 @@ public class Tests {
     void update() {
         UndoableStringBuilder usb = new UndoableStringBuilder(s4);
         //printing the memoryStats of groupAdmin before adding members.
-        System.out.println("The groupAdmin memory use before adding members");
+        System.out.println("The groupAdmin memory 'use' before adding members");
         logger.info(() -> JvmUtilities.memoryStats(groupAdmin));
 
         //Register new members
@@ -240,14 +240,14 @@ public class Tests {
         groupAdmin.register(m3);
 
         //printing the memoryStats of groupAdmin after adding three members.
-        System.out.println("The groupAdmin memory use  after adding three members.");
+        System.out.println("The groupAdmin memory 'use' after adding three members.");
         logger.info(() -> JvmUtilities.memoryStats(groupAdmin));
 
         //Make actions and tests
         groupAdmin.notifyMembers(usb);
 
         //printing the memoryStats of groupAdmin after the usb has changed be 'update' function for all the members.
-        System.out.println("The groupAdmin memory use after the usb has changed be 'update' function for all the members.");
+        System.out.println("The groupAdmin memory use after the 'usb' has changed be 'update' function for all the members.");
         logger.info(() -> JvmUtilities.memoryStats(groupAdmin));
 
         assertEquals(m1.getUsb().toString(), s4);
