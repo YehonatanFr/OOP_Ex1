@@ -13,6 +13,7 @@ public class ConcreteMember implements  Member{
     @Override
     public void update(UndoableStringBuilder usb) {
         this.setUsb(usb);
+        this.name = Usb.toString();
     }
 
     public UndoableStringBuilder getUsb() {

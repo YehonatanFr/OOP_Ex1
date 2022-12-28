@@ -28,21 +28,31 @@ public class GroupAdmin implements Sender {
     @Override
     public void insert(int offset, String obj) {
         usb.insert(offset, obj);
+        notifyMembers(usb);
     }
 
     @Override
     public void append(String obj) {
         usb.append(obj);
+        notifyMembers(usb);
     }
 
     @Override
     public void delete(int start, int end) {
         usb.delete(start, end);
+        notifyMembers(usb);
     }
 
     @Override
     public void undo() {
         usb.Undo();
+        notifyMembers(usb);
+    }
+
+    public void notifyMembers(UndoableStringBuilder usb){
+        for (Member member: this.MemberList){
+            member.update(usb);
+        }
     }
 
     public String toString()
