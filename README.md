@@ -37,10 +37,10 @@ This is the class from Ex_0. We used the solution that provided us by the lectur
 This class implements from Member class. In this class we update the UndoableStringBuilder in case we change something, we also have getters & setters for the variable of the class.   
 **GroupAdmin**    
 This class implements fron Sender. In this class we build GroupAdmin Object, Its actually a group of members, for the group we used in ArrayList. Also, in this class we have UndoableStringBuilder variable for the trace of the action. Any case something change, we need to update.    
-## Project Building##    
+## Project Building      
 In order to build the project in your computer you have to download the pom.Xml first, and run it with maven.     
 Maven is a popular open-source build tool developed by the Apache Group to build, publish, and deploy several projects at once for better project management. The tool provides allows developers to build and document the lifecycle framework.     
 Afetr you run the pom.Xml you need to add maven FrameWork Support and re-build the project.     
 Now you have the project on your computer and you can run each class as you want and check the tests are included in the project.    
-## About the tests##    
+## About the tests    
 For each function we did a separate test. In each test we printed the memory status of the ArrayList group member begore we add members, after we add members, and after we activate the function. After all the data was printed we could get the info we needed to check and trace the memory changes that occurred, and know if our function implements were efficient.  
