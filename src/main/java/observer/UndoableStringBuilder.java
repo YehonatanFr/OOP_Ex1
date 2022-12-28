@@ -3,20 +3,26 @@ package observer;
 import java.util.EmptyStackException;
 import java.util.Stack;
 
-/*
-Use the class you've implemented in previous assignment
- */
 public class UndoableStringBuilder {
     private StringBuilder mystring ;
     private Stack<String> stUndo;
 
     /**
      Empty constructor for String Builder
-     *
-     * @param str*/
-    public UndoableStringBuilder(String str)
+     * */
+    public UndoableStringBuilder()
     {
         mystring = new StringBuilder();
+        stUndo = new Stack<>();
+    }
+
+    /**
+     * Constructor gets string
+     * @param str
+     */
+    public UndoableStringBuilder(String str)
+    {
+        mystring = new StringBuilder(str);
         stUndo = new Stack<>();
     }
 
@@ -142,3 +148,4 @@ public class UndoableStringBuilder {
         return this.mystring.toString();
     }
 }
+

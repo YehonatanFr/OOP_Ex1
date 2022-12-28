@@ -13,6 +13,11 @@ public class GroupAdmin implements Sender {
         this.MemberList = new ArrayList<>();
     }
 
+    public int MembersCurrently()
+    {
+        return MemberList.size();
+    }
+
     @Override
     public void register(Member obj) {
         this.MemberList.add(obj);
