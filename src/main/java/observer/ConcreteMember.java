@@ -7,7 +7,6 @@ public class ConcreteMember implements  Member{
 
     public ConcreteMember(String str) {
         this.name = str;
-        this.Usb = new UndoableStringBuilder(str);
     }
 
     @Override
