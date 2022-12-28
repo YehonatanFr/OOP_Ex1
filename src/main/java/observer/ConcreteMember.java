@@ -2,9 +2,11 @@ package observer;
 
 public class ConcreteMember implements  Member{
 
+    private String name;
     private UndoableStringBuilder Usb;
 
     public ConcreteMember(String str) {
+        this.name = str;
         this.Usb = new UndoableStringBuilder(str);
     }
 
@@ -19,6 +21,11 @@ public class ConcreteMember implements  Member{
 
     public void setUsb(UndoableStringBuilder usb) {
         this.Usb = usb;
+    }
+
+    public String toString()
+    {
+        return "" +name;
     }
 
 }

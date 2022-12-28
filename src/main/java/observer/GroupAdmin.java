@@ -1,9 +1,12 @@
 package observer;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class GroupAdmin implements Sender {
+    //The variable usb is the status describer of the Changes.
     private UndoableStringBuilder usb;
+    //The ArrayList MemberList is for keeping all the members in the group.
     private ArrayList<Member> MemberList;
 
     public GroupAdmin() {
@@ -13,13 +16,13 @@ public class GroupAdmin implements Sender {
     @Override
     public void register(Member obj) {
         this.MemberList.add(obj);
-        System.out.println("Great to have you as a Member");
+        System.out.println("Great to have you as a Member: "+obj.toString());
     }
 
     @Override
     public void unregister(Member obj) {
         this.MemberList.remove(obj);
-        System.out.println("Hope you will register in the future");
+        System.out.println("Hope you will register in the future: "+obj.toString());
     }
 
     @Override
@@ -40,6 +43,11 @@ public class GroupAdmin implements Sender {
     @Override
     public void undo() {
         usb.Undo();
+    }
+
+    public String toString()
+    {
+        return MemberList.toString();
     }
 
 

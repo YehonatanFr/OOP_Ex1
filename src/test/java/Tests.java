@@ -17,12 +17,19 @@ public class Tests {
         ConcreteMember member1 = new ConcreteMember(s1);
         ConcreteMember member2 = new ConcreteMember(s2);
 
+        //Test if create new members
+        System.out.println(member1.toString());
+
         GroupAdmin groupAdmin = new GroupAdmin();
 
+        //Test if register members
         groupAdmin.register(member1);
         groupAdmin.register(member2);
 
-        member1.toString();
+        //Test if unregister members
+        System.out.println(groupAdmin);
+        groupAdmin.unregister(member1);
+        System.out.println(groupAdmin);
 
         logger.info(()->JvmUtilities.objectFootprint(s1));
 
