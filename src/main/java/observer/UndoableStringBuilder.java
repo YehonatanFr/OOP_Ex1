@@ -26,6 +26,10 @@ public class UndoableStringBuilder {
         stringBuilder = new StringBuilder();
     }
 
+    public UndoableStringBuilder(String str) {
+        stringBuilder = new StringBuilder(str);
+    }
+
     public UndoableStringBuilder reverse() {
         stringBuilder.reverse();
         Action action = new Action(){
