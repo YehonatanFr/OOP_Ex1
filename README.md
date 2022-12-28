@@ -30,6 +30,13 @@ So the goal in this Ex is to trace after this two variables and update in case w
 We have two Intefaces. Member and Sender.   
 Sender -> GroupAdmin    
 Member -> ConcreteMember   
-## The classes
+## The classes   
+**UndoableStringBuilder**    
+This is the class from Ex_0. We used the solution that provided us by the lecturer in the moudle. In this class we create new object of UndoableStringBuilder with some action we can make on the object, For example: insert, append, delete. We also add option to do undo if you regret and you want to do undo.    
+**ConcreteMember**    
+This class implements from Member class. In this class we update the UndoableStringBuilder in case we change something, we also have getters & setters for the variable of the class.   
+**GroupAdmin**    
+This class implements fron Sender. In this class we build GroupAdmin Object, Its actually a group of members, for the group we used in ArrayList. Also, in this class we have UndoableStringBuilder variable for the trace of the action. Any case something change, we need to update.    
+
 
 
