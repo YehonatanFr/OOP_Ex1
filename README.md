@@ -23,10 +23,13 @@ Behavioral patterns are about identifying common communication patterns between 
 Behavioral patterns are Chain of responsibility, Command, Interpreter, Iterator, Mediator, Memento, Null Object, Observer, State, Strategy, Template method, Visitor    
 ## About Observer pattern
 Observer pattern is used when there is one-to-many relationship between objects such as if one object is modified, its depenedent objects are to be notified automatically. Observer pattern falls under behavioral pattern category.    
-# About The project
-
+# About The project   
+In our project we have 2 Interface classes and 2 Implements classes. We have UndoStringBuilder class(From Ex_0), and we need to use this class in this Ex. We want to trace after two variable, UndoStringBuilder and GroupAdmin, and in case we change a member in group admin, its automataclly update the usb.
+So the goal in this Ex is to trace after this two variables and update in case we need to.   
 ## The Interfaces
-
+We have two Intefaces. Member and Sender.   
+Sender -> GroupAdmin    
+Member -> ConcreteMember   
 ## The classes
 
 
