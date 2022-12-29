@@ -33,6 +33,12 @@ public class UndoableStringBuilder {
         else {
             stringBuilder = new StringBuilder(str);
         }
+        Action action = new Action(){
+            public void undo() {
+                stringBuilder = new StringBuilder();
+            }
+        };
+        actions.add(action);
     }
 
     public UndoableStringBuilder reverse() {
